@@ -5,7 +5,7 @@ program loan_calculator
 implicit none
 !Define/add variables, integer? array??
 real,dimension(3, 5) :: data
-!integer, dimension(:,:,:), allocatable :: ii
+integer :: i 
 
 !Prompt the user to enter the name of a file that has the  loan terms.
 !print*, "Input the data file: "
@@ -18,9 +18,13 @@ read(1,*), data
 !allocate(data(n,m))
 
 close(unit=1)
-write(*,*),"loan 1: ", data(:,1)
-write(*,*),"loan 2: ", data(:,2)
-write(*,*),"loan 3: ", data(:,3)
+do i = 1, size(data(1,:))
+    write(*,*),"loan", i,":", data(:,i)
+enddo
+
+!write(*,*),"loan 1: ", data(:,1)
+!write(*,*),"loan 2: ", data(:,2)
+!write(*,*),"loan 3: ", data(:,3)
 write(*,*),"data ", data
 !Calculate the following
 !Calculate the monthly payment schedule (only display first and last years)
