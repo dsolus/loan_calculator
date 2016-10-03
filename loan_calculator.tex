@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{language=Fortran,captionpos=b,tabsize=3,frame=single,keywordstyle=
+\color{brown},commentstyle=\color{gray},stringstyle=\color{red},numbers=left,numberstyle=\tiny,numbersep=5pt,breaklines=true,showstringspaces=false,basicstyle=\footnotesize,emph={label}}
+
+\title{COMS 6100 Loan Calculator Homework}
+\author{Daniel Solus}
+\date{October 3, 2016}
+\begin{document}
+\maketitle
+
+\section{Synopsis}
+\paragraph{} My program reads in the data file after prompting the user for a valid entry. The data is stored in an array and accessed using the variable data. A major loop cycles through the array and takes loan terms one at a time. For each row of loan terms the program calculates a corresponding monthly payment for the loan using the formula:
+
+%insert formula here
+
+Using the monthly payment, initial amount, interest rate, and years the program calculates the number of payments, principal amount paid, interest paid and the balance for each monthly payment. This data is formatted  and printed to the screen. Additionally a function calculates the total payment amount and a subroutine calculates the total interest paid for each loan.
+
+\section{Validation}
+\paragraph{} I attempted to use the diff command and the .txt file provided, but I am not sure how to run Dr. Carroll's loanCalculator program and mine to compare. I probably don't need to and just use the compare the output files. However, I know my program has a few obvious differences that would like to sort out first so I am putting it off.
+
+\section{Difficulties}
+\paragraph{} This will be a long section. I have trouble understanding precision and variable kind definitions. Doing this project has helped me to understand how to implement and define variables but I don't feel I understand the concept completely. The largest problem I encountered was reading the data into an array for files of different size. So far, I have been able to read in data for an array with a predefined array size. I struggled with the formatting for write statements for a while. Then I realized I reversed the order for one of the format variables. I am still having trouble writing only the first and the last periods for each loan. I can do just the first 12 periods but not the last? The subroutine I added at the end to calculate the total interest confused me a bit. It works but it feels a little incomplete.
+
+\section{Instructions}
+\paragraph{} I sent you my github repository (early for some reason?) but I will send it again. There is no password so you should be able to fork the project and clone directly from the repository. I am still working on the makefile but hopefully I can sort it out.
+
+\section{Hours Spent}
+\paragraph{} I spent a good twenty+ hours on this project. Unfortunately, I lost track of how many hours but I have a tendency to get frustrated and break while thinking of ways to approach a problem. Also, I can really see the importance of outlining projects before coding. Many of the concepts covered in Code Complete would have helped me use my time more efficiently. However, due to my lack of experience I tend to try and get some small part of code working before anything else. A more organized approach would be best but it is hard to fight the urge to jump right in.
+
+\end{document}
